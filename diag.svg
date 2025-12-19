@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650">
+  <!-- Styles -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Start -->
+  <ellipse cx="400" cy="30" rx="80" ry="25" fill="#E8F5E9" stroke="#66BB6A" stroke-width="2"/>
+  <text x="400" y="35" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Start</text>
+  
+  <!-- User Input -->
+  <rect x="300" y="80" width="200" height="70" rx="10" ry="10" fill="#E0F7FA" stroke="#00ACC1" stroke-width="2"/>
+  <text x="400" y="110" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">1. User enters credentials</text>
+  <text x="400" y="130" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">(email and password)</text>
+  
+  <!-- Submit Button -->
+  <rect x="300" y="170" width="200" height="70" rx="10" ry="10" fill="#E0F7FA" stroke="#00ACC1" stroke-width="2"/>
+  <text x="400" y="200" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">2. User clicks submit</text>
+  <text x="400" y="220" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">button</text>
+  
+  <!-- Generate Base CAPTCHA -->
+  <rect x="300" y="260" width="200" height="70" rx="10" ry="10" fill="#E3F2FD" stroke="#42A5F5" stroke-width="2"/>
+  <text x="400" y="290" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">3. System generates CAPTCHA</text>
+  <text x="400" y="310" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">from "samples" dataset</text>
+  
+  <!-- Apply CW Attack -->
+  <rect x="300" y="350" width="200" height="70" rx="10" ry="10" fill="#E3F2FD" stroke="#42A5F5" stroke-width="2"/>
+  <text x="400" y="370" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">4. Apply Carlini-Wagner</text>
+  <text x="400" y="390" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">adversarial attack</text>
+  <text x="400" y="410" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">(AI-resistant, human-readable)</text>
+  
+  <!-- First Decision - Human or Bot -->
+  <polygon points="400,440 480,490 400,540 320,490" fill="#FFF9C4" stroke="#FBC02D" stroke-width="2"/>
+  <text x="400" y="480" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">5. CAPTCHA solved</text>
+  <text x="400" y="500" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">by human or robot?</text>
+  
+  <!-- Human Path -->
+  <rect x="100" y="455" width="180" height="70" rx="10" ry="10" fill="#DCEDC8" stroke="#AED581" stroke-width="2"/>
+  <text x="190" y="485" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Human attempts to</text>
+  <text x="190" y="505" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">solve CAPTCHA</text>
+  
+  <!-- Human Decision -->
+  <polygon points="190,545 250,575 190,605 130,575" fill="#FFF9C4" stroke="#FBC02D" stroke-width="2"/>
+  <text x="190" y="580" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Correct?</text>
+  
+  <!-- Human Success -->
+  <rect x="100" y="625" width="180" height="70" rx="10" ry="10" fill="#DCEDC8" stroke="#AED581" stroke-width="2"/>
+  <text x="190" y="655" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Authentication</text>
+  <text x="190" y="675" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">successful</text>
+  
+  <!-- Robot Path -->
+  <rect x="520" y="455" width="180" height="70" rx="10" ry="10" fill="#FFE0B2" stroke="#FFB74D" stroke-width="2"/>
+  <text x="610" y="475" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Robot uses CNN</text>
+  <text x="610" y="495" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">to analyze image</text>
+  <text x="610" y="515" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">(difficult due to CW attack)</text>
+  
+  <!-- Robot Failure -->
+  <rect x="520" y="575" width="180" height="70" rx="10" ry="10" fill="#FFCDD2" stroke="#E57373" stroke-width="2"/>
+  <text x="610" y="605" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Robot likely fails</text>
+  <text x="610" y="625" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Error message shown</text>
+  
+  <!-- Arrows -->
+  <line x1="400" y1="55" x2="400" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="150" x2="400" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="240" x2="400" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="330" x2="400" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="420" x2="400" y2="440" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Human branch -->
+  <line x1="320" y1="490" x2="280" y2="490" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="285" y="470" font-family="Arial" font-size="12" fill="#333">Human</text>
+  
+  <!-- Robot branch -->
+  <line x1="480" y1="490" x2="520" y2="490" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="490" y="470" font-family="Arial" font-size="12" fill="#333">Robot</text>
+  
+  <!-- Human result -->
+  <line x1="190" y1="525" x2="190" y2="545" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="190" y1="605" x2="190" y2="625" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="170" y="615" font-family="Arial" font-size="12" fill="#333">Yes</text>
+  
+  <!-- Robot result -->
+  <line x1="610" y1="525" x2="610" y2="575" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Feedback loop -->
+  <line x1="130" y1="575" x2="80" y2="575" stroke="#333" stroke-width="2"/>
+  <line x1="80" y1="575" x2="80" y2="290" stroke="#333" stroke-width="2"/>
+  <line x1="80" y1="290" x2="300" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="110" y="590" font-family="Arial" font-size="12" fill="#333">No - Try Again</text>
+</svg>
